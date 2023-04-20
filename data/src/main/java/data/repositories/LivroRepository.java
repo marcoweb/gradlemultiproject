@@ -1,20 +1,15 @@
-package data;
+package data.repositories;
 
+import data.models.Livro;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-import data.models.Livro;
-
-public class DataContext {
+public class LivroRepository {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("BibliotecaPU");
     private EntityManager em = emf.createEntityManager();
 
-    public Livro getLivro(int id) {
+    public Livro fetch(int id) {
         return em.find(Livro.class, id);
-    }
-
-    public EntityManager getEntityManager() {
-        return em;
     }
 }
