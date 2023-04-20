@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:6.2.1.Final'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+}
